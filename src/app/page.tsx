@@ -2,7 +2,9 @@ import clsx from "clsx"
 import Image from "next/image"
 import logo from "@/assets/wxad-design.svg"
 import Video from "@/components/Video"
-import ArtDots from "@/components/ArtDots"
+import dynamic from "next/dynamic"
+
+const ArtDots = dynamic(() => import("@/components/ArtDots"), { ssr: false })
 
 export default function Home() {
   return (
